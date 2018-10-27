@@ -27,6 +27,7 @@ public class OrderActivity extends AppCompatActivity {
     EditText itemCountInput;
     List<String> coffeeList = new ArrayList<>();
     List<String> coffeePriceList = new ArrayList<>();
+    List<String> coffeeListWithPrices = new ArrayList<>();
     DBHelper myDB;
 
     Map<String,Integer> ItemsAndPrices = new LinkedHashMap<>();
