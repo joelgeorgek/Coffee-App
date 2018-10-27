@@ -23,7 +23,7 @@ import java.util.Map;
 
 public class OrderActivity extends AppCompatActivity {
 
-    AutoCompleteTextView itemInput;
+    Spinner itemInput;
     EditText itemCountInput;
     List<String> coffeeList = new ArrayList<>();
     List<String> coffeePriceList = new ArrayList<>();
@@ -50,26 +50,25 @@ public class OrderActivity extends AppCompatActivity {
         }
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>
-                (this,android.R.layout.select_dialog_item,coffeeList);
+                (this,android.R.layout.simple_spinner_dropdown_item,coffeeList);
 
-        itemInput.setThreshold(1);
         itemInput.setAdapter(adapter);
 
         myDB = new DBHelper(this);
     }
     public void onClickAddOrder(View view){
-        String item = itemInput.getText().toString();
+        String item = itemInput.getSelectedItem().toString();
         String itemCountString = itemCountInput.getText().toString();
-        if(!coffeeList.contains(item)){
-            itemInput.setError("Item does not exist");
-            itemInput.setText("");
-            return;
-        }
-        if(item.equals("")){
-            itemInput.setError("Enter an item");
-            itemInput.setText("");
-            return;
-        }
+        //if(!coffeeList.contains(item)){
+        //    itemInput.setError("Item does not exist");
+        //    itemInput.setText("");
+        //    return;
+        //}
+        //if(item.equals("")){
+        //    itemInput.setError("Enter an item");
+        //    itemInput.setText("");
+        //    return;
+        //}
         if(itemCountString.equals("")){
             itemCountInput.setError("Enter a count");
             itemCountInput.setText("");
