@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -106,7 +107,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>{
         TextView OrderCount;
         TextView OrderNumber;
         TextView OrderCost;
-        Button RemoveButton;
+        ImageButton RemoveButton;
         public MyViewHolder(View itemView) {
             super(itemView);
             view =itemView;

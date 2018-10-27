@@ -46,19 +46,20 @@ public class OrderActivity extends AppCompatActivity {
 
         int i=0;
         for(String item : coffeeList){
+            coffeeListWithPrices.add(item +" - $"+Integer.parseInt(coffeePriceList.get(i)));
             ItemsAndPrices.put(item, Integer.parseInt(coffeePriceList.get(i)));
             i++;
         }
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>
-                (this,android.R.layout.simple_spinner_dropdown_item,coffeeList);
+                (this,android.R.layout.simple_spinner_dropdown_item,coffeeListWithPrices);
 
         itemInput.setAdapter(adapter);
 
         myDB = new DBHelper(this);
     }
     public void onClickAddOrder(View view){
-        String item = itemInput.getSelectedItem().toString();
+        String item = coffeeList.get(itemInput.getSelectedItemPosition());
         String itemCountString = itemCountInput.getText().toString();
         //if(!coffeeList.contains(item)){
         //    itemInput.setError("Item does not exist");
