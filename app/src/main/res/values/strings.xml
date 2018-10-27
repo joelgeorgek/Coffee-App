@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">MyCoffeeApp</string>
+    <string-array name="coffees_array">
+        <item>Espresso (Short Black)</item>
+        <item>Double Espresso (Doppio)</item>
+        <item>Short Macchiato</item>
+        <item>Long Macchiato</item>
+        <item>Ristretto</item>
+        <item>Long Black (Americano)</item>
+        <item>Café Latte</item>
+        <item>Cappuccino</item>
+        <item>Flat White</item>
+        <item>Piccolo Latte</item>
+        <item>Mocha</item>
+        <item>Affogato</item>
+    </string-array>
+
+    <string-array name="coffees_price_array">
+        <item>2</item>
+        <item>3</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>2</item>
+        <item>3</item>
+        <item>2</item>
+    </string-array>
+</resources>
